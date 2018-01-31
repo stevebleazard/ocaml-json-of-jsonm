@@ -5,6 +5,7 @@ module Json_of_channel = Json_of_jsonm_monad.Make(struct
     let (>>=) a f = f a
   end)
 
+type json = Json_of_channel.json
 
 let json_of_channel in_channel =
   let reader buf size = input in_channel buf 0 size in

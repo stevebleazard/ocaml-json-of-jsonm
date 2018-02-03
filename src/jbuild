@@ -3,5 +3,5 @@
 (library
  ((name json_of_jsonm_lib)
    (public_name json_of_jsonm)
-   (libraries (jsonm uutf))
+   (libraries (jsonm))
  ))

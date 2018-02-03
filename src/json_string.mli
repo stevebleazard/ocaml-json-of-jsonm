@@ -1,9 +1,5 @@
-module Json_of_string : module type of Json_of_jsonm_monad.Make(struct
-    type 'a t = 'a
-
-    let return _ = failwith "error"
-    let (>>=) _ _ = failwith "error"
-  end)
+module Json_of_string : Json_of_jsonm_monad.Json_encoder_decoder
+  with type 'a IO.t = 'a
 
 type json = Json_of_string.json
 

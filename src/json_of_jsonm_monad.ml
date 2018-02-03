@@ -53,7 +53,8 @@ module type Json_encoder_decoder = sig
   val encode_string_hum : json -> (string, string) result IO.t
 end
 
-module Make(IO : IO) : Json_encoder_decoder with module IO := IO = struct
+module Make(IO : IO) = struct
+  module IO = IO
   open IO
 
   type nonrec json = json

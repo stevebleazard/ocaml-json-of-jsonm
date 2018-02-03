@@ -53,4 +53,4 @@ module type Json_encoder_decoder = sig
 end
 
 
-module Make(IO : IO) : Json_encoder_decoder with module IO := IO
+module Make(IO : IO) : Json_encoder_decoder with type 'a IO.t = 'a IO.t
